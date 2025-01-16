@@ -1,0 +1,6 @@
+@GerenciadorDoacaoSangue.API_HostAddress = http://localhost:5164
+
+GET {{GerenciadorDoacaoSangue.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
