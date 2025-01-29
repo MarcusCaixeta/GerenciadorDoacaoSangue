@@ -27,5 +27,10 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
         {
             return Task.FromResult(_doador.SingleOrDefault(c => c.Id == id));
         }
+
+        public Task ProcessarDoacao(Doacao doacao)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

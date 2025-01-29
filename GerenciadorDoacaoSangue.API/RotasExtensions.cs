@@ -1,4 +1,4 @@
-﻿using GerenciadorDoacaoSangue.Application.Commands.Doadores.CadastrarDoadorCommand;
+﻿using GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDoadorCommand;
 using GerenciadorDoacaoSangue.Application.Queries.Doadores.ConsultarDoadorPorIdQuery;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

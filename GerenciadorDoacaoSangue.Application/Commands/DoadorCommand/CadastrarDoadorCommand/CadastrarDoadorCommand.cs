@@ -1,12 +1,8 @@
 ﻿using GerenciadorDoacaoSangue.Application.Models;
 using GerenciadorDoacaoSangue.Core.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace GerenciadorDoacaoSangue.Application.Commands.Doadores.CadastrarDoadorCommand
+namespace GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDoadorCommand
 {
     public class CadastrarDoadorCommand : IRequest<ResponseResult<Guid>>
     {

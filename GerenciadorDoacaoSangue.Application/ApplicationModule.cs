@@ -1,4 +1,4 @@
-﻿using GerenciadorDoacaoSangue.Application.Commands.Doadores.CadastrarDoadorCommand;
+﻿using GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDoadorCommand;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;

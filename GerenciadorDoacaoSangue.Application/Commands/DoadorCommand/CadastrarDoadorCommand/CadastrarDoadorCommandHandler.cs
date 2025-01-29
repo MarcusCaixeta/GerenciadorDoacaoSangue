@@ -2,13 +2,8 @@
 using GerenciadorDoacaoSangue.Core.Entities;
 using GerenciadorDoacaoSangue.Core.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GerenciadorDoacaoSangue.Application.Commands.Doadores.CadastrarDoadorCommand
+namespace GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDoadorCommand
 {
     public class CadastrarDoadorCommandHandler : IRequestHandler<CadastrarDoadorCommand, ResponseResult<Guid>>
 
@@ -32,6 +27,7 @@ namespace GerenciadorDoacaoSangue.Application.Commands.Doadores.CadastrarDoadorC
                 request.Endereco);
 
             await _repository.Cadastrar(doador);
+
 
             return new ResponseResult<Guid>(
                     doador.Id
