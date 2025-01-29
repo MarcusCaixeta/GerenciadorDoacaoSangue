@@ -23,6 +23,9 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
             return Task.CompletedTask;
         }
 
-    
+        public Task<Doador> ConsultarPorId(Guid id)
+        {
+            return Task.FromResult(_doador.SingleOrDefault(c => c.Id == id));
+        }
     }
 }
