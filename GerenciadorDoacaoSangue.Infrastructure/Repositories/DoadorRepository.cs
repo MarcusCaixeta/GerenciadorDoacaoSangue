@@ -22,5 +22,7 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 
             return Task.CompletedTask;
         }
+
+    
     }
 }

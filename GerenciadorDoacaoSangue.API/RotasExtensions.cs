@@ -1,4 +1,4 @@
-﻿using GerenciadorDoacaoSangue.Application.Doadores.Commands.CadastrarDoadorCommand;
+﻿using GerenciadorDoacaoSangue.Application.Commands.Doadores.CadastrarDoadorCommand;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

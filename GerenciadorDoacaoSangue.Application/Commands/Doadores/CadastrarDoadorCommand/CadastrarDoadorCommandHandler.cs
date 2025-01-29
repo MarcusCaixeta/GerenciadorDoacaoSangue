@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GerenciadorDoacaoSangue.Application.Doadores.Commands.CadastrarDoadorCommand
+namespace GerenciadorDoacaoSangue.Application.Commands.Doadores.CadastrarDoadorCommand
 {
     public class CadastrarDoadorCommandHandler : IRequestHandler<CadastrarDoadorCommand, ResponseResult<Guid>>
 
