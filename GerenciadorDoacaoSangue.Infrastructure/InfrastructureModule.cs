@@ -15,7 +15,7 @@ namespace GerenciadorDoacaoSangue.Infrastructure
 
         private static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-            services.AddSingleton<IDoadorRepository, DoadorRepository>();
+            services.AddScoped<IDoadorRepository, DoadorRepository>();
 
             return services;
         }

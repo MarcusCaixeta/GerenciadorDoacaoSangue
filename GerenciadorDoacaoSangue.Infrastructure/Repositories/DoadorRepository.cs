@@ -1,5 +1,7 @@
 ﻿using GerenciadorDoacaoSangue.Core.Entities;
 using GerenciadorDoacaoSangue.Core.Repositories;
+using GerenciadorDoacaoSangue.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,22 +12,28 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 {
     public class DoadorRepository : IDoadorRepository
     {
+        private readonly GerenciadorDoacaoSangueDbContext _dbContext;
+
+        public DoadorRepository(GerenciadorDoacaoSangueDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
         private readonly List<Doador> _doador;
         public DoadorRepository()
         {
             _doador = [];
         }
 
-        public Task Cadastrar(Doador doador)
+        public async Task Cadastrar(Doador doador)
         {
-            _doador.Add(doador);
+            await _dbContext.Doador.AddAsync(doador);
 
-            return Task.CompletedTask;
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task<Doador> ConsultarPorId(Guid id)
+        public async Task<Doador> ConsultarPorId(Guid Id)
         {
-            return Task.FromResult(_doador.SingleOrDefault(c => c.Id == id));
+            return await _dbContext.Doador.SingleOrDefaultAsync(p => p.Id == Id);
         }
 
         public Task ProcessarDoacao(Doacao doacao)

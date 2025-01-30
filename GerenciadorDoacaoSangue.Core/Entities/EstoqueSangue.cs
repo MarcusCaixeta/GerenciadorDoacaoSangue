@@ -11,5 +11,8 @@ namespace GerenciadorDoacaoSangue.Core.Entities
         public string TipoSanguineo { get; private set; }
         public string FatorRh { get; private set; }
         public int QuantidadeML { get; private set; }
+
+        private EstoqueSangue() { }
+
     }
 }

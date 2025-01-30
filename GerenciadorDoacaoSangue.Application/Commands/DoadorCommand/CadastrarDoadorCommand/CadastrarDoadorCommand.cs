@@ -6,13 +6,17 @@ namespace GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDo
 {
     public class CadastrarDoadorCommand : IRequest<ResponseResult<Guid>>
     {
-        public string NomeCompleto { get; private set; }
-        public string Email { get; private set; }
-        public DateTime DataNascimento { get; private set; }
-        public string Genero { get; private set; }
-        public decimal Peso { get; private set; }
-        public string TipoSanguineo { get; private set; }
-        public string FatorRh { get; private set; }
-        public Endereco Endereco { get; private set; }
+        public string NomeCompleto { get;  set; }
+        public string Email { get;  set; }
+        public DateTime DataNascimento { get;  set; }
+        public string Genero { get;  set; }
+        public decimal Peso { get;  set; }
+        public string TipoSanguineo { get;  set; }
+        public string FatorRh { get;  set; }
+        public string Logradouro { get;  set; }
+        public string Bairro { get;  set; }
+        public string Cidade { get;  set; }
+        public string Estado { get;  set; }
+        public string CEP { get;  set; }
     }
 }

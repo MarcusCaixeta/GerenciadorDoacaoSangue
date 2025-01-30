@@ -17,7 +17,7 @@ namespace GerenciadorDoacaoSangue.Application.Commands.DoacaoCommands.ProcessaDo
             var doacao = new Doacao(
                             request.DoadorId,
                             request.DataDoacao,
-                            request.QuantidadeML,null);
+                            request.QuantidadeML);
 
             await _repository.ProcessarDoacao(doacao);
 

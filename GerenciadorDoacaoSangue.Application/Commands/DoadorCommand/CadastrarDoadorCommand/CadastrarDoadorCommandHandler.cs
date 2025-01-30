@@ -24,9 +24,13 @@ namespace GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDo
                 request.Peso,
                 request.TipoSanguineo,
                 request.FatorRh,
-                request.Endereco);
+                request.Logradouro,
+                request.Bairro,
+                request.Cidade,
+                request.Estado,
+                request.CEP);
 
-            await _repository.Cadastrar(doador);
+                await _repository.Cadastrar(doador);
 
 
             return new ResponseResult<Guid>(
