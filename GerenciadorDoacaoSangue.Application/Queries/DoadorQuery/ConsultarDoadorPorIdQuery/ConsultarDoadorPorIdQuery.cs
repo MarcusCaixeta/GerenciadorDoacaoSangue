@@ -2,7 +2,7 @@
 using GerenciadorDoacaoSangue.Application.Models;
 using MediatR;
 
-namespace GerenciadorDoacaoSangue.Application.Queries.Doadores.ConsultarDoadorPorIdQuery
+namespace GerenciadorDoacaoSangue.Application.Queries.DoadorQuery.ConsultarDoadorPorIdQuery
 {
     public class ConsultarDoadorPorIdQuery : IRequest<ResponseResult<DetalhesDoadorInputModel>>
     {

@@ -7,8 +7,8 @@ namespace GerenciadorDoacaoSangue.Application.Commands.DoacaoCommands.ProcessaDo
 {
     public class ProcessaDoacaoCommandHandler : IRequestHandler<ProcessaDoacaoCommand, ResponseResult<Task>>
     {
-        private readonly IDoadorRepository _repository;
-        public ProcessaDoacaoCommandHandler(IDoadorRepository repository)
+        private readonly IDoacaoRepository _repository;
+        public ProcessaDoacaoCommandHandler(IDoacaoRepository repository)
         {
             _repository = repository;
         }

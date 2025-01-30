@@ -1,4 +1,8 @@
-﻿using GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDoadorCommand;
+﻿using GerenciadorDoacaoSangue.Application.Commands.DoacaoCommands.ProcessaDoacaoCommand;
+using GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDoadorCommand;
+using GerenciadorDoacaoSangue.Application.Queries.DoacaoQuery.ConsultaTodasDoacoesQuery;
+using GerenciadorDoacaoSangue.Application.Queries.DoadorQuery.ConsultarDoadorPorIdQuery;
+using GerenciadorDoacaoSangue.Application.Queries.EstoqueSangueQuery.ConsultaTodoEstoqueSangueQuery;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -19,7 +23,15 @@ namespace GerenciadorDoacaoSangue.Application
 
         private static IServiceCollection AddMediator(this IServiceCollection services)
         {
-            services.AddMediatR(o => o.RegisterServicesFromAssemblyContaining<CadastrarDoadorCommand>());
+            services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssemblyContaining<CadastrarDoadorCommand>();
+                cfg.RegisterServicesFromAssemblyContaining<ProcessaDoacaoCommand>();
+                cfg.RegisterServicesFromAssemblyContaining<ConsultarDoadorPorIdQuery>();
+                cfg.RegisterServicesFromAssemblyContaining<ConsultaTodasDoacoesQuery>();
+                cfg.RegisterServicesFromAssemblyContaining<ConsultaTodoEstoqueSangueQuery>();
+            });
+
 
             return services;
         }

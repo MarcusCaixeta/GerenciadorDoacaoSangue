@@ -3,7 +3,7 @@ namespace GerenciadorDoacaoSangue.Core.Entities
 {
     public class Doacao : EntidadeBase
     {
-        public Doacao(int doadorid, DateTime datadoacao, int quantidademl)
+        public Doacao(Guid doadorid, DateTime datadoacao, int quantidademl)
         {
             DoadorId = doadorid;
             DataDoacao = datadoacao;
@@ -11,7 +11,7 @@ namespace GerenciadorDoacaoSangue.Core.Entities
         }
         private Doacao() { }
 
-        public int DoadorId { get; private set; }
+        public Guid DoadorId { get; private set; }
         public DateTime DataDoacao { get; private set; }
         public int QuantidadeML { get; private set; }
     }

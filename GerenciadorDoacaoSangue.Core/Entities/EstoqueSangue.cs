@@ -8,11 +8,17 @@ namespace GerenciadorDoacaoSangue.Core.Entities
 {
     public class EstoqueSangue : EntidadeBase
     {
-        public string TipoSanguineo { get; private set; }
-        public string FatorRh { get; private set; }
-        public int QuantidadeML { get; private set; }
+        public string TipoSanguineo { get;  set; }
+        public string FatorRh { get;  set; }
+        public int QuantidadeML { get;  set; }
 
         private EstoqueSangue() { }
 
+        public EstoqueSangue(string tipoSanguineo, string fatorRh, int quantidadeML)
+        {
+            TipoSanguineo = tipoSanguineo;
+            FatorRh = fatorRh;
+            QuantidadeML = quantidadeML;
+        }
     }
 }

@@ -5,8 +5,8 @@ namespace GerenciadorDoacaoSangue.Application.Commands.DoacaoCommands.ProcessaDo
 {
     public class ProcessaDoacaoCommand : IRequest<ResponseResult<Task>>
     {
-        public int DoadorId { get; private set; }
-        public DateTime DataDoacao { get; private set; }
-        public int QuantidadeML { get; private set; }
+        public Guid DoadorId { get;  set; }
+        public DateTime DataDoacao { get;  set; }
+        public int QuantidadeML { get;  set; }
     }
 }

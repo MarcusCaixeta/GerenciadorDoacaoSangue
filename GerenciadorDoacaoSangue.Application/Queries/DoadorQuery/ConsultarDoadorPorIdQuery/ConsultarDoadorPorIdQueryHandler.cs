@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GerenciadorDoacaoSangue.Application.Queries.Doadores.ConsultarDoadorPorIdQuery
+namespace GerenciadorDoacaoSangue.Application.Queries.DoadorQuery.ConsultarDoadorPorIdQuery
 {
     public class ConsultarDoadorPorIdQueryHandler : IRequestHandler<ConsultarDoadorPorIdQuery, ResponseResult<DetalhesDoadorInputModel>>
     {
