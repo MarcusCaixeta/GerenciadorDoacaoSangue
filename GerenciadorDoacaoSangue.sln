@@ -5,15 +5,17 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{93511782-36DA-47D6-92DE-2BD257E0F554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorDoacaoSangue.API", "GerenciadorDoacaoSangue.API\GerenciadorDoacaoSangue.API.csproj", "{FFD99066-D73F-4721-A6A4-4AA9DD605E18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciadorDoacaoSangue.API", "GerenciadorDoacaoSangue.API\GerenciadorDoacaoSangue.API.csproj", "{FFD99066-D73F-4721-A6A4-4AA9DD605E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorDoacaoSangue.Application", "GerenciadorDoacaoSangue.Application\GerenciadorDoacaoSangue.Application.csproj", "{01E4A1E1-5CCE-4288-9C14-AB2004A4FE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciadorDoacaoSangue.Application", "GerenciadorDoacaoSangue.Application\GerenciadorDoacaoSangue.Application.csproj", "{01E4A1E1-5CCE-4288-9C14-AB2004A4FE55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorDoacaoSangue.Infrastructure", "GerenciadorDoacaoSangue.Infrastructure\GerenciadorDoacaoSangue.Infrastructure.csproj", "{C27D896B-36BE-4C0F-9E5B-3D099BA667E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciadorDoacaoSangue.Infrastructure", "GerenciadorDoacaoSangue.Infrastructure\GerenciadorDoacaoSangue.Infrastructure.csproj", "{C27D896B-36BE-4C0F-9E5B-3D099BA667E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorDoacaoSangue.Core", "GerenciadorDoacaoSangue.Core\GerenciadorDoacaoSangue.Core.csproj", "{865CE998-6A08-4A8B-A17B-FD535CAB40FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciadorDoacaoSangue.Core", "GerenciadorDoacaoSangue.Core\GerenciadorDoacaoSangue.Core.csproj", "{865CE998-6A08-4A8B-A17B-FD535CAB40FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B778098A-7C07-420D-979D-54539B4D38CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorDoacaoSangue.Tests", "GerenciadorDoacaoSangue.Tests\GerenciadorDoacaoSangue.Tests.csproj", "{7657E674-E1A5-4FEF-B13B-AA3E91A853CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{865CE998-6A08-4A8B-A17B-FD535CAB40FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865CE998-6A08-4A8B-A17B-FD535CAB40FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{865CE998-6A08-4A8B-A17B-FD535CAB40FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7657E674-E1A5-4FEF-B13B-AA3E91A853CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7657E674-E1A5-4FEF-B13B-AA3E91A853CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7657E674-E1A5-4FEF-B13B-AA3E91A853CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7657E674-E1A5-4FEF-B13B-AA3E91A853CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{01E4A1E1-5CCE-4288-9C14-AB2004A4FE55} = {93511782-36DA-47D6-92DE-2BD257E0F554}
 		{C27D896B-36BE-4C0F-9E5B-3D099BA667E0} = {93511782-36DA-47D6-92DE-2BD257E0F554}
 		{865CE998-6A08-4A8B-A17B-FD535CAB40FD} = {93511782-36DA-47D6-92DE-2BD257E0F554}
+		{7657E674-E1A5-4FEF-B13B-AA3E91A853CC} = {B778098A-7C07-420D-979D-54539B4D38CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B091DEE-C53A-45CA-939C-511C235C33B3}

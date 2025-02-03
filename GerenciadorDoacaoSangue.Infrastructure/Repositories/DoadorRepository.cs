@@ -26,14 +26,15 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 
         public async Task Cadastrar(Doador doador)
         {
-            await _dbContext.Doador.AddAsync(doador);
+            var id = await _dbContext.Doador.AddAsync(doador);
 
             await _dbContext.SaveChangesAsync();
+
         }
 
         public async Task<Doador> ConsultarPorId(Guid Id)
         {
             return await _dbContext.Doador.SingleOrDefaultAsync(p => p.Id == Id);
-        }       
+        }
     }
 }

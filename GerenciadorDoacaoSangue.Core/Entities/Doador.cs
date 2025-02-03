@@ -3,6 +3,8 @@ namespace GerenciadorDoacaoSangue.Core.Entities
 {
     public class Doador : EntidadeBase
     {
+        private const string erroPesoMinimo = "Peso mínimo para doação é 50kg.";
+
         public Doador(string nome, string email, DateTime dataNascimento, string genero, decimal peso, string tipoSanguineo, string fatorRh, string logradouro,
             string bairro, string cidade, string estado, string cep)
         {
@@ -10,7 +12,10 @@ namespace GerenciadorDoacaoSangue.Core.Entities
             Email = email;
             DataNascimento = dataNascimento;
             Genero = genero;
+
+            ArgumentOutOfRangeException.ThrowIfLessThan(peso, 50, erroPesoMinimo);
             Peso = peso;
+
             TipoSanguineo = tipoSanguineo;
             FatorRh = fatorRh;
             Logradouro = logradouro;
@@ -34,5 +39,7 @@ namespace GerenciadorDoacaoSangue.Core.Entities
         public string Cidade { get; private set; }
         public string Estado { get; private set; }
         public string CEP { get; private set; }
+
+
     }
 }
