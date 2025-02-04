@@ -26,6 +26,10 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 
         public async Task Cadastrar(Doador doador)
         {
+            var doadorValidacaoEmail = await _dbContext.Doador.SingleOrDefaultAsync(p => p.Email == doador.Email);
+            if (doadorValidacaoEmail != null)
+                throw new ArgumentException("Email já existe");
+
             var id = await _dbContext.Doador.AddAsync(doador);
 
             await _dbContext.SaveChangesAsync();

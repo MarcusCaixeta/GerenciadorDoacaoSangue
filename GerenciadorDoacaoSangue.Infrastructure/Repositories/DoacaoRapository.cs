@@ -20,7 +20,7 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
         }
 
         public async Task ProcessarDoacao(Doacao doacao)
-        {
+        {          
             var doador = await _dbContext.Doador.SingleOrDefaultAsync(p => p.Id == doacao.DoadorId);
 
             if (doador == null)

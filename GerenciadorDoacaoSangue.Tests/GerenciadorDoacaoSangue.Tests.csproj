@@ -26,4 +26,8 @@
     <ProjectReference Include="..\GerenciadorDoacaoSangue.Core\GerenciadorDoacaoSangue.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\" />
+  </ItemGroup>
+
 </Project>

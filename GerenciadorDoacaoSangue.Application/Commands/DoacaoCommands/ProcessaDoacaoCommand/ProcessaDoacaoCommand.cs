@@ -8,5 +8,9 @@ namespace GerenciadorDoacaoSangue.Application.Commands.DoacaoCommands.ProcessaDo
         public Guid DoadorId { get;  set; }
         public DateTime DataDoacao { get;  set; }
         public int QuantidadeML { get;  set; }
+        public DateTime DataNascimento { get; set; }
+        public string Genero { get; set; }
+        public DateTime DataUltimaDoacao { get; set; }
+
     }
 }
