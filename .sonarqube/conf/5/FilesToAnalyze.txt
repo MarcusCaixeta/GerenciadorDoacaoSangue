@@ -1,0 +1,7 @@
+﻿C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Core\Entities\Doacao.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Core\Entities\Doador.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Core\Entities\EntidadeBase.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Core\Entities\EstoqueSangue.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Core\Repositories\IDoacaoRepository.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Core\Repositories\IDoadorRepository.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Core\Repositories\IEstoqueSangueRepository.cs

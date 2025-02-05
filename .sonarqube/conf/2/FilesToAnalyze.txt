@@ -1,0 +1,5 @@
+﻿C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Infrastructure\InfrastructureModule.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Infrastructure\Persistence\GerenciadorDoacaoSangueDbContext.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Infrastructure\Repositories\DoacaoRapository.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Infrastructure\Repositories\DoadorRepository.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.Infrastructure\Repositories\EstoqueSangueRepository.cs

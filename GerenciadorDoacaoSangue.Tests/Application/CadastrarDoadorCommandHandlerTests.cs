@@ -77,7 +77,7 @@ namespace GerenciadorDoacaoSangue.Tests.Application
             );
 
             // Verifica se a mensagem de erro contém a justificativa esperada
-            Assert.Contains("Peso mínimo para doação é 50kg", exception.Message);
+            Assert.Contains("peso", exception.Message);
         }
 
         //[Fact]

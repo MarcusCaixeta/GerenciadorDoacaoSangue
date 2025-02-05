@@ -19,13 +19,18 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
+        public class NotFoundException : Exception
+        {
+            public NotFoundException(string message) : base(message) { }
+        }
+
         public async Task ProcessarDoacao(Doacao doacao)
-        {          
+        {
             var doador = await _dbContext.Doador.SingleOrDefaultAsync(p => p.Id == doacao.DoadorId);
 
             if (doador == null)
             {
-                throw new Exception("Doador não encontrado");
+                throw new NotFoundException("Doador não encontrado");
             }
             else
             {
@@ -50,9 +55,13 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
             }
         }
 
-        public Task<List<Doacao>?> ConsultaTodasDoacoes()
+        public Task<List<Doacao>> ConsultaTodasDoacoes()
         {
             var doacoes = _dbContext.Doacao.ToListAsync();
+
+            if (doacoes == null)
+                throw new NotFoundException("Doação não encontrada");
+
             return doacoes;
         }
     }

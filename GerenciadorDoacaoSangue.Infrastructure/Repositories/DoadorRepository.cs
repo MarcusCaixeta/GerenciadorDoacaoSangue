@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static GerenciadorDoacaoSangue.Infrastructure.Repositories.DoacaoRapository;
 
 namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 {
@@ -18,27 +19,27 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
         {
             _dbContext = dbContext;
         }
-        private readonly List<Doador> _doador;
-        public DoadorRepository()
-        {
-            _doador = [];
-        }
-
+       
         public async Task Cadastrar(Doador doador)
         {
             var doadorValidacaoEmail = await _dbContext.Doador.SingleOrDefaultAsync(p => p.Email == doador.Email);
             if (doadorValidacaoEmail != null)
                 throw new ArgumentException("Email já existe");
 
-            var id = await _dbContext.Doador.AddAsync(doador);
+            await _dbContext.Doador.AddAsync(doador);
 
             await _dbContext.SaveChangesAsync();
 
         }
 
-        public async Task<Doador> ConsultarPorId(Guid Id)
+        public async Task<Doador> ConsultarPorId(Guid id)
         {
-            return await _dbContext.Doador.SingleOrDefaultAsync(p => p.Id == Id);
+            var doador = await _dbContext.Doador.SingleOrDefaultAsync(p => p.Id == id);
+            
+            if (doador == null)
+                throw new NotFoundException("Doador não encontrado");
+
+            return doador;
         }
     }
 }

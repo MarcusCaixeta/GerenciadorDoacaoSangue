@@ -100,7 +100,6 @@ namespace GerenciadorDoacaoSangue.Tests.Application
         }
 
         [Fact]
-
         public async Task DoacaoForaDaQuantidadeMaximaPermitida_NSubistitute()
         {
             //Arrange

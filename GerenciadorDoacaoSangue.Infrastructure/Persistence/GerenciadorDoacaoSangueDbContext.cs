@@ -14,7 +14,7 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());           
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(GerenciadorDoacaoSangueDbContext).Assembly);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace GerenciadorDoacaoSangue.Core.Repositories
     public interface IDoacaoRepository
     {
         Task ProcessarDoacao(Doacao doacao);
-        Task<List<Doacao>?> ConsultaTodasDoacoes();
+        Task<List<Doacao>> ConsultaTodasDoacoes();
 
     }
 }

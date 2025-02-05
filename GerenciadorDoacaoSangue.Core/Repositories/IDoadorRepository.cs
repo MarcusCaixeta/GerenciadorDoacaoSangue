@@ -6,6 +6,6 @@ namespace GerenciadorDoacaoSangue.Core.Repositories
     {
         Task Cadastrar(Doador doador);
 
-        Task<Doador?> ConsultarPorId(Guid id);
+        Task<Doador> ConsultarPorId(Guid id);
     }
 }

@@ -1,0 +1,1 @@
+C:\GitHub\GerenciadorDoacaoSangue\.sonarqube\out\0

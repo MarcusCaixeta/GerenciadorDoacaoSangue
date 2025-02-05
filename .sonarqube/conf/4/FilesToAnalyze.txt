@@ -1,0 +1,10 @@
+﻿C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\Program.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\RotasExtensions.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\obj\Debug\net8.0\GerenciadorDoacaoSangue.API.GlobalUsings.g.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\obj\Debug\net8.0\GerenciadorDoacaoSangue.API.AssemblyInfo.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\obj\Debug\net8.0\GerenciadorDoacaoSangue.API.MvcApplicationPartsAssemblyInfo.cs
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\appsettings.Development.json
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\appsettings.json
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\GerenciadorDoacaoSangue.API.http
+C:\GitHub\GerenciadorDoacaoSangue\GerenciadorDoacaoSangue.API\Properties\launchSettings.json

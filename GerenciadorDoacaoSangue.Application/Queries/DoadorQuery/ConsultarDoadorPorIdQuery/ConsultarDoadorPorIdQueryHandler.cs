@@ -12,7 +12,7 @@ namespace GerenciadorDoacaoSangue.Application.Queries.DoadorQuery.ConsultarDoado
 {
     public class ConsultarDoadorPorIdQueryHandler : IRequestHandler<ConsultarDoadorPorIdQuery, ResponseResult<DetalhesDoadorInputModel>>
     {
-        private IDoadorRepository _repository;
+        private readonly IDoadorRepository _repository;
 
         public ConsultarDoadorPorIdQueryHandler(IDoadorRepository repository)
         {
@@ -24,7 +24,7 @@ namespace GerenciadorDoacaoSangue.Application.Queries.DoadorQuery.ConsultarDoado
             var doador = await _repository.ConsultarPorId(request.Id);
 
             if (doador is null)
-                return new ResponseResult<DetalhesDoadorInputModel>(default, "Não encontrado", false);
+                throw new InvalidOperationException("Nenhuma doador encontrado.");
 
             var viewModel = new DetalhesDoadorInputModel(doador);
 

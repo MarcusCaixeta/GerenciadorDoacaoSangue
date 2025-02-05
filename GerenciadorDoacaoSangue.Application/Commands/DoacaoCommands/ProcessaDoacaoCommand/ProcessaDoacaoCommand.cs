@@ -5,11 +5,11 @@ namespace GerenciadorDoacaoSangue.Application.Commands.DoacaoCommands.ProcessaDo
 {
     public class ProcessaDoacaoCommand : IRequest<ResponseResult<Task>>
     {
-        public Guid DoadorId { get;  set; }
-        public DateTime DataDoacao { get;  set; }
-        public int QuantidadeML { get;  set; }
+        public Guid DoadorId { get; set; }
+        public DateTime DataDoacao { get; set; }
+        public int QuantidadeML { get; set; }
         public DateTime DataNascimento { get; set; }
-        public string Genero { get; set; }
+        public string Genero { get; set; } = "Outros";
         public DateTime DataUltimaDoacao { get; set; }
 
     }

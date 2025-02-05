@@ -12,8 +12,6 @@ namespace GerenciadorDoacaoSangue.Core.Entities
         public string FatorRh { get;  set; }
         public int QuantidadeML { get;  set; }
 
-        private EstoqueSangue() { }
-
         public EstoqueSangue(string tipoSanguineo, string fatorRh, int quantidadeML)
         {
             TipoSanguineo = tipoSanguineo;

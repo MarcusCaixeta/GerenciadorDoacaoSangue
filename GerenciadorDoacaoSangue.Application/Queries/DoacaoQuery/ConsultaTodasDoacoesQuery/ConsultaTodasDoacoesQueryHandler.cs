@@ -13,7 +13,7 @@ namespace GerenciadorDoacaoSangue.Application.Queries.DoacaoQuery.ConsultaTodasD
 {
     public class ConsultaTodasDoacoesQueryHandler : IRequestHandler<ConsultaTodasDoacoesQuery, ResponseResult<List<Doacao>>>
     {
-        private IDoacaoRepository _repository;
+        private readonly IDoacaoRepository _repository;
 
         public ConsultaTodasDoacoesQueryHandler(IDoacaoRepository repository)
         {
@@ -22,6 +22,9 @@ namespace GerenciadorDoacaoSangue.Application.Queries.DoacaoQuery.ConsultaTodasD
         public async Task<ResponseResult<List<Doacao>>> Handle(ConsultaTodasDoacoesQuery request, CancellationToken cancellationToken)
         {
             var doacoes = await _repository.ConsultaTodasDoacoes();
+
+            if (doacoes is null)
+                throw new InvalidOperationException("Nenhuma doação encontrada.");
 
             return new ResponseResult<List<Doacao>>(doacoes);
 

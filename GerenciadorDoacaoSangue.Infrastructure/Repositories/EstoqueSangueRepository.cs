@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static GerenciadorDoacaoSangue.Infrastructure.Repositories.DoacaoRapository;
 
 namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 {
@@ -19,9 +20,13 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public Task<List<EstoqueSangue>?> ConsultaTodoEstoqueSangue()
+        public async Task<List<EstoqueSangue>?> ConsultaTodoEstoqueSangue()
         {
-            var estoqueSangue = _dbContext.EstoqueSangue.ToListAsync();
+            var estoqueSangue = await _dbContext.EstoqueSangue.ToListAsync();
+
+            if (estoqueSangue == null)
+                throw new NotFoundException("Estoque de Sangue não encontrado");
+
             return estoqueSangue;
         }
     }

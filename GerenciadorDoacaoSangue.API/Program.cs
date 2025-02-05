@@ -1,3 +1,4 @@
+
 using GerenciadorDoacaoSangue.API;
 using GerenciadorDoacaoSangue.Application;
 using GerenciadorDoacaoSangue.Infrastructure;
@@ -10,13 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-builder.Services.AddDbContext<GerenciadorDoacaoSangueDbContext>(options => options.UseInMemoryDatabase("GerenciadorDoacaoSangue"));
+builder.Services.AddDbContext<GerenciadorDoacaoSangueDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("GerenciadorDoacaoSangueDb")));
+
 
 builder.Services
     .AddApplication()
     .AddInfrastructure();
-
-
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -35,4 +35,4 @@ app.UseHttpsRedirection();
 
 app.MapearRotas();
     
-app.Run();
+await app.RunAsync();
