@@ -23,7 +23,7 @@ namespace GerenciadorDoacaoSangue.Application.Queries.EstoqueSangueQuery.Consult
             var estoqueSangue = await _repository.ConsultaTodoEstoqueSangue();
 
             if (estoqueSangue is null)
-                throw new InvalidOperationException("Nenhuma doação encontrada.");
+                return new ResponseResult<List<EstoqueSangue>>([]);
 
             return new ResponseResult<List<EstoqueSangue>>(estoqueSangue);
         }

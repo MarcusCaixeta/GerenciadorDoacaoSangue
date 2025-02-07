@@ -2,12 +2,6 @@
 using GerenciadorDoacaoSangue.Core.Repositories;
 using GerenciadorDoacaoSangue.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static GerenciadorDoacaoSangue.Infrastructure.Repositories.DoacaoRapository;
 
 namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 {
@@ -19,7 +13,11 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
         {
             _dbContext = dbContext;
         }
-       
+        public class NotFoundException : Exception
+        {
+            public NotFoundException(string message) : base(message) { }
+        }
+
         public async Task Cadastrar(Doador doador)
         {
             var doadorValidacaoEmail = await _dbContext.Doador.SingleOrDefaultAsync(p => p.Email == doador.Email);

@@ -38,5 +38,29 @@ namespace GerenciadorDoacaoSangue.Tests.Application
             //Assert
             Assert.True(result.Sucesso);
         }
+
+        //[Fact]
+        //public async Task ConsultaFeitoComNull_NSubistitute()
+        //{
+        //    //Arrange
+
+        //    var repository = Substitute.For<IDoacaoRepository>();
+        //    Guid id = Guid.NewGuid();
+
+        //    List<Doacao> listadoacaoMock = new List<Doacao>();
+
+        //    repository.ConsultaTodasDoacoes().Returns(Task.FromResult(listadoacaoMock));
+
+        //    var command = new ConsultaTodasDoacoesQuery();
+
+
+        //    var handler = new ConsultaTodasDoacoesQueryHandler(repository);
+
+        //    //Act
+        //    var result = await handler.Handle(command, new CancellationToken());
+
+        //    //Assert
+        //    Assert.False(result.Sucesso);
+        //}
     }
 }

@@ -21,13 +21,9 @@ namespace GerenciadorDoacaoSangue.Application.Queries.DoacaoQuery.ConsultaTodasD
         }
         public async Task<ResponseResult<List<Doacao>>> Handle(ConsultaTodasDoacoesQuery request, CancellationToken cancellationToken)
         {
-            var doacoes = await _repository.ConsultaTodasDoacoes();
-
-            if (doacoes is null)
-                throw new InvalidOperationException("Nenhuma doação encontrada.");
+            var doacoes = await _repository.ConsultaTodasDoacoes();           
 
             return new ResponseResult<List<Doacao>>(doacoes);
-
         }
     }
 }

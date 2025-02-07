@@ -2,19 +2,14 @@
 using GerenciadorDoacaoSangue.Core.Repositories;
 using GerenciadorDoacaoSangue.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 {
-    public class DoacaoRapository : IDoacaoRepository
+    public class DoacaoRepository : IDoacaoRepository
     {
         private readonly GerenciadorDoacaoSangueDbContext _dbContext;
 
-        public DoacaoRapository(GerenciadorDoacaoSangueDbContext dbContext)
+        public DoacaoRepository(GerenciadorDoacaoSangueDbContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -57,10 +52,7 @@ namespace GerenciadorDoacaoSangue.Infrastructure.Repositories
 
         public Task<List<Doacao>> ConsultaTodasDoacoes()
         {
-            var doacoes = _dbContext.Doacao.ToListAsync();
-
-            if (doacoes == null)
-                throw new NotFoundException("Doação não encontrada");
+            var doacoes = _dbContext.Doacao.ToListAsync();            
 
             return doacoes;
         }

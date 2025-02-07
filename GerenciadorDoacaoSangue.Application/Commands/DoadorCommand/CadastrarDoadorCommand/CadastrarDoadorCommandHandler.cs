@@ -6,7 +6,6 @@ using MediatR;
 namespace GerenciadorDoacaoSangue.Application.Commands.DoadorCommand.CadastrarDoadorCommand
 {
     public class CadastrarDoadorCommandHandler : IRequestHandler<CadastrarDoadorCommand, ResponseResult<Guid>>
-
     {
         private readonly IDoadorRepository _repository;
         public CadastrarDoadorCommandHandler(IDoadorRepository repository)

@@ -103,7 +103,6 @@ namespace GerenciadorDoacaoSangue.Tests.Application
         public async Task DoacaoForaDaQuantidadeMaximaPermitida_NSubistitute()
         {
             //Arrange
-
             var repository = Substitute.For<IDoacaoRepository>();
             repository.ProcessarDoacao(Arg.Any<Doacao>()).Returns(Task.FromResult(1));
 

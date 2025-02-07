@@ -9,7 +9,8 @@ namespace GerenciadorDoacaoSangue.Core.Entities
             DataDoacao = datadoacao;
             QuantidadeML = quantidademl;
         }
-        private Doacao() { }
+        public Doacao() { }
+
 
         public Guid DoadorId { get; private set; }
         public DateTime DataDoacao { get; private set; }

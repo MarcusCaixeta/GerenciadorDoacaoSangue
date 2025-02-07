@@ -5,7 +5,7 @@
   <SonarBinDir>C:\GitHub\GerenciadorDoacaoSangue\.sonarqube\bin</SonarBinDir>
   <SonarScannerWorkingDirectory>C:\GitHub\GerenciadorDoacaoSangue</SonarScannerWorkingDirectory>
   <JavaExePath>C:\Users\marcusc\.sonar\cache\4bafe2e94439c8193fc8c68247cb0dbaf4e80265b903288f63f128304f129bbe\OpenJDK17U-jre_x64_windows_hotspot_17.0.11_9.zip_extracted\jdk-17.0.11+9-jre/bin/java.exe</JavaExePath>
-  <ScanAllAnalysis>true</ScanAllAnalysis>
+  <ScanAllAnalysis>false</ScanAllAnalysis>
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
   <SonarQubeHostUrl>https://sonar.martins.com.br</SonarQubeHostUrl>
   <SonarQubeVersion>10.7.0.96327</SonarQubeVersion>
@@ -154,8 +154,9 @@
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">https://sonar.martins.com.br</Property>
-    <Property Name="sonar.cs.opencover.reportsPaths">C:/GitHub/GerenciadorDoacaoSangue/coverage.opencover.xml</Property>
-    <Property Name="sonar.exclusions">C:/GitHub/GerenciadorDoacaoSangue/coverage.opencover.xml</Property>
+    <Property Name="sonar.cs.opencover.reportsPaths">C:/GitHub/GerenciadorDoacaoSangue/GerenciadorDoacaoSangue.Tests/coverage.opencover.xml</Property>
+    <Property Name="sonar.exclusions">**/coveragereport/**</Property>
+    <Property Name="sonar.scanner.scanAll">false</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>
